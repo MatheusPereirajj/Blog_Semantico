@@ -1,0 +1,76 @@
+/* Geral */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: georgia;
+}
+
+ul {
+    list-style: none;  /*tirando o estilo da lista padrão*/
+}
+
+a {
+    text-decoration: none; /*tirando os underline das links*/
+    color: #444;
+    transition: 0.4s; /*esse comando é interligado ao "A:HOVERr", serve para quando a pessoa passar o mouse por cima do link, o msm mude a cor que consta no "A:HOVER".*/
+}
+
+a:hover {
+    color: #37a1f7;
+}
+
+/* Navbar */
+#navbar{
+    padding: 1.5rem 2.5rem;
+    border-bottom: 2px solid #ddd;
+}
+
+#navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#nav-links {
+    display: flex;  /* coloquei o flex para deixar os links um ao lado do outro. */
+    gap: 1rem;    /* distancia entre um link ao outro. */
+}
+
+/* Header */
+.container {
+    display: flex; /* coloquei para deixar o main e o aside um ao lado do outro. */
+    gap: 3rem; /* botei para afastar o main do aside */
+    padding: 2rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#post-container {
+   flex: 3 1 0; /* aqui é informando que meu conteudo principal vai ser 3x maior que os outros conteudo. */ 
+}
+
+.post {
+    margin-bottom: 2.5rem ; /* serve para afastar um post do outro */
+}
+
+.post img {
+    width: 100%; /* esse comando vai fazer com que a largura da imagem não passe da largura do post [que é de 3x maior do que os outros conteúdos] */
+    margin-bottom: 1rem;
+}
+
+.title,
+.description,
+.author {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.author {
+    color: #333;
+    font-weight: bold;
+}
