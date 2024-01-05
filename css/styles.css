@@ -28,9 +28,9 @@ a:hover {
 #navbar-inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: center;
 }
 
 #nav-links {
@@ -38,7 +38,7 @@ a:hover {
     gap: 1rem;    /* distancia entre um link ao outro. */
 }
 
-/* Header */
+/* conteúdo principal */
 .container {
     display: flex; /* coloquei para deixar o main e o aside um ao lado do outro. */
     gap: 3rem; /* botei para afastar o main do aside */
@@ -47,7 +47,7 @@ a:hover {
     margin: 0 auto;
 }
 
-#post-container {
+#post-container { /* observação nesse comando */
    flex: 3 1 0; /* aqui é informando que meu conteudo principal vai ser 3x maior que os outros conteudo. */ 
 }
 
@@ -73,4 +73,75 @@ a:hover {
 .author {
     color: #333;
     font-weight: bold;
+}
+
+/* Barra lateral */
+#siderbar {
+    flex: 1 1 0; /* a proporção dele é 1 , sendo que o outro elemento(main) tem 3 [linha 51], esse elemento deverá trer 25% do tamanho principal. */
+}
+
+#search-bar,
+#categories,
+#tags {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#search-bar h4,
+#categories h4,
+#tags h4 { 
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+#search-bar form {
+    display: flex;  /* para deixar o input de um lado e botão de outro */ 
+}
+
+#search-bar input {
+    padding: 0.5rem 1rem; /* espaçamento interno */
+    border: 1px solid #ddd;
+}
+
+#search-bar input[type="submit"] {
+    cursor: pointer; /* serve para quando vc for passar o mouse por cima e aparecer a "mãozinha" */
+    background-color: #37a1f7;
+    color: #fff;
+    border: none; 
+}
+
+#categories li {
+    margin-bottom: 1rem;
+}
+
+#tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#tags-container a {
+    background-color: #ddd;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+}
+
+/* rodapé */
+#footer {
+    border-top: 2px solid #ddd;
+    padding: 3rem;
+    text-align: center;    
+}
+
+#footer h2,
+#footer p {
+    margin-bottom: 1rem;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media(max-width: 450px){
+     .container {
+        flex-wrap: wrap;
+    }
 }
